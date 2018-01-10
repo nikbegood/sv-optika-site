@@ -1,0 +1,93 @@
+
+<!--
+6 - Navbar with brand left, links left and right, toggler right
+    The links collapse into the mobile menu
+-->
+<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-danger">
+    <a href="/" class="navbar-brand">SV</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar6">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse justify-content-stretch" id="navbar6">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'landing'  %}">О нас </a>
+            </li>
+             <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Каталог
+                </a>
+                <div class="dropdown-menu scrollable-menu"  aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{% url 'novinky'  %}">Новинки</a>
+                    <a class="dropdown-item" href="{% url 'metall'  %}">Оправы металлические</a>
+                    <a class="dropdown-item" href="{% url 'plastik'  %}">Оправы пластиковые</a>
+                    <a class="dropdown-item" href="{% url 'odetmetall'  %}">Оправы детские пластиковые</a>
+                    <a class="dropdown-item" href="{% url 'odetmetall'  %}">Оправы детские металл</a>
+                    <a class="dropdown-item" href="{% url 'trenag'  %}">Тренажеры</a>
+                    <a class="dropdown-item" href="{% url 'gotplastik'  %}">Очки в пластиковой оправе</a>
+                    <a class="dropdown-item" href="{% url 'gotmetall'  %}">Очки в металической оправе готовые</a>
+                    <a class="dropdown-item" href="{% url 'lektor'  %}">Лектор</a>
+                    <a class="dropdown-item" href="{% url 'trenag'  %}">Очки глаукомные</a>
+                    <a class="dropdown-item" href="{% url 'komp'  %}">Очки компьютерные</a>
+                    <a class="dropdown-item" href="{% url 'vfutlyare'  %}">Очки в футляре</a>
+                    <a class="dropdown-item" href="{% url 'bezopr'  %}">Безоправные очки</a>
+                    <a class="dropdown-item" href="{% url 'sunglasses'  %}">Очки солнцезащитные</a>
+                    <a class="dropdown-item" href="{% url 'gotdetplastik'  %}">Очки детские пластиковая оправа</a>
+                    <a class="dropdown-item" href="{% url 'izum'  %}">Изюмская вставка</a>
+                    <a class="dropdown-item" href="{% url 'linzy'  %}">Средства ухода контактные линзы</a>
+                    <a class="dropdown-item" href="{% url 'linzy'  %}">Контактные линзы</a>
+                    <a class="dropdown-item" href="{% url 'linzy'  %}">Линза офтальмологическая</a>
+                    <a class="dropdown-item" href="{% url 'futlar'  %}">Футляры</a>
+                    <a class="dropdown-item" href="{% url 'taktik'  %}">Очки тактические</a>
+                    <a class="dropdown-item" href="{% url 'antifari'  %}">Очки антифары</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contacts'  %}">Контакты</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav flex-row">
+            <li class="nav-item"><a class="nav-link" href=""><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li>
+                <div class="nav-item basket-container" >
+                    <a href=""><i class="fa fa-cart-arrow-down" style="font-size:28px;color:#EAFCD5;"></i> <span id="basket_total_amount"></span>
+                        <span id="basket_total_nmb" style="color:#EAFCD5;">
+                        {% if products_total_nmb %}
+                            ({{ products_total_nmb }})
+                        {% else %}
+                            (0)
+                        {% endif %}
+                    </span></a>
+                    <div class="basket-items hidden">
+                        <ul class="">
+                            {% if products_in_basket %}
+
+                                {% for product_in_basket in products_in_basket %}
+                                    <li>
+                                        {{ product_in_basket.product.name }} {{ product_in_basket.nmb }} шт.
+                                        по {{ product_in_basket.price_per_item }} грн.
+                                        <a class="delete-item" href="" data-product_id="{{ product_in_basket.id }}">x</a>
+                                    </li>
+                                {% endfor %}
+                                <li>
+                                    <a href="{% url 'checkout'  %}">
+                                        Оформить заказ
+                                    </a>
+                                </li>
+                            {% else %}
+                                <li>
+                                    <p>
+                                        Корзина пуста
+                                    </p>
+                                </li>
+                            {% endif %}
+
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>

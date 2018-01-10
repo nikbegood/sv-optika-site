@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <ul class="m-static" style="list-style:none;margin-top: 50px;border: 1px solid lightgrey; padding:5px 5px 5px 5px!important"><p style="font-family: 'Shrikhand';
+font-size: 20px;padding-left:35px !important">Каталог товаров</p>
+                <li class="m-static-i"><a href="{% url 'novinky'  %}" >Новинки</a></li>
+                <li class="m-static-i"><a href="{% url 'plastik'  %}" >Оправы металлические</a></li>
+                <li class="m-static-i"><a href="{% url 'metall'  %}" >Оправы пластиковые</a></li>
+                <li class="m-static-i"><a href="{% url 'odetmetall'  %}" >Оправы детские пластиковые</a></li>
+                <li class="m-static-i"><a href="{% url 'odetmetall'  %}" >Оправы детские металл</a></li>
+                <li class="m-static-i"><a href="{% url 'trenag'  %}" >Тренажеры</a></li>
+                <li class="m-static-i"><a href="{% url 'gotplastik'  %}" >Очки в пластиковой оправе</a></li>
+                <li class="m-static-i"><a href="{% url 'gotmetall'  %}" >Очки в металлической оправе </a></li>
+                <li class="m-static-i"><a href="{% url 'lektor'  %}" >Лектор</a></li>
+                <li class="m-static-i"><a href="{% url 'trenag'  %}" >Очки глаукомные</a></li>
+                <li class="m-static-i"><a href="{% url 'komp'  %}" >Очки компьютерные</a></li>
+                <li class="m-static-i"><a href="{% url 'vfutlyare'  %}" >Очки в футляре</a></li>
+                <li class="m-static-i"><a href="{% url 'bezopr'  %}" >Безоправные очки</a></li>
+                <li class="m-static-i"><a href="{% url 'sunglasses'  %}" >Очки солнцезащитные</a></li>
+                <li class="m-static-i"><a href="{% url 'gotdetplastik'  %}" >Очки детские пластиковая оправа</a></li>
+                <li class="m-static-i"><a href="{% url 'izum'  %}" >Изюмская вставка</a></li>
+                <li class="m-static-i"><a href="{% url 'linzy'  %}" >Средства ухода контактные линзы</a></li>
+                <li class="m-static-i"><a href="{% url 'linzy'  %}" >Контактные линзы</a></li>
+                <li class="m-static-i"><a href="{% url 'linzy'  %}" >Линза офтальмологическая</a></li>
+                <li class="m-static-i"><a href="{% url 'taktik'  %}" >Очки тактические</a></li>
+                <li class="m-static-i"><a href="{% url 'antifari'  %}" >Очки антифары</a></li>
+                <li class="m-static-i"><a href="{% url 'futlar'  %}" >Футляры</a></li>
+            </ul>
+        </div>
+        <div class="col-8" style="margin-top: 25px; margin-bottom: 35px;border: 1px solid lightgrey;">
+            <h4 style="text-align:center;margin-top: 20px; margin-bottom: 10px;">Вас интересуют готовые очки, оправы, солнцезащитные очки ?</h4>
+            <p style="text-align:justify;">Все это вы можете заказать прямо сейчас, сэкономив свое временя и деньги! Оптика «SV» с удовольствием поможет вам избежать необходимости посещать десятки оптических салонов. Жители Луганска и близлежащих городов могут без лишних хлопот посетить наш интернет-магазин.</p>
+
+            <p style="text-align:justify;">Вне зависимости от того, где вы находитесь на данный момент, вы сможете сделать заказ, что, согласитесь, очень удобно и в период рабочего времени мы с вами свяжемся. Какие же преимущества предлагает наш интернет-магазин оптической продукции? Вы сможете посетить наш интернет магазин и купить любые товары по низким ценам. Наш ассортимент регулярно пополняется новинками.</p>
+            <h5 style="text-align:justify;">Вам необходимы футляры для очков, офтальмологические линзы, контактные линзы и аксессуары к ним по низким ценам?</h5>
+
+            <p style="text-align:justify;">Оптика «SV» поможет вам. Широкий ассортимент позволит подобрать вам товар по оптимальной цене и нужного качества. Оптика «SV» – это многообразие предложений на любой вкус. Чтобы заказать товар, вам не придется никуда ехать или идти, т.к. все операции совершаются в виртуальном режиме.
+                Именно поэтому «SV»  – это интернет-магазин технологического оборудования для оптика-мастера, инструментов и демонстрационного оборудования, покупать в котором выгодно и приятно.</p>
+
+            <p style="text-align:justify;">Чтобы сделать у нас заказ, достаточно выполнить несколько простых действий. Выбрать товар, нажать кнопку «Купить» и заполнить простую форму заказа, после чего мы вам перезвоним. </p>
+        </div>
+        </div>
+</div>
+{% endblock %}
