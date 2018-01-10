@@ -52,7 +52,7 @@
         <ul class="navbar-nav ml-auto">
             <li>
                 <div class="nav-item basket-container" >
-                    <a href=""><i class="fa fa-cart-arrow-down" style="font-size:28px;color:#EAFCD5;"></i> <span id="basket_total_amount"></span>
+                    <a href="{% url 'checkout'  %}"><i class="fa fa-cart-arrow-down" style="font-size:28px;color:#EAFCD5;"></i> <span id="basket_total_amount"></span>
                         <span id="basket_total_nmb" style="color:#EAFCD5;">
                         {% if products_total_nmb %}
                             ({{ products_total_nmb }})
@@ -66,8 +66,10 @@
 
                                 {% for product_in_basket in products_in_basket %}
                                     <li>
+                                        <a href="{% url 'checkout'  %}">
                                         {{ product_in_basket.product.name }} {{ product_in_basket.nmb }} шт.
                                         по {{ product_in_basket.price_per_item }} грн.
+                                        </a>
                                         <a class="delete-item" href="" data-product_id="{{ product_in_basket.id }}">x</a>
                                     </li>
                                 {% endfor %}

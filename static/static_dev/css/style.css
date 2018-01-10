@@ -27,7 +27,7 @@ html, body{
     background-color: #0C0C0C;
 }
 @media screen and (max-width: 920px) {
-    footer {min-height: 450px;}
+    footer {min-height: 475px;}
    }
 
 @media screen and (max-width: 720px) {

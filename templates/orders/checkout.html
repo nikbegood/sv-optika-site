@@ -4,11 +4,11 @@
 
 {% block content %}
     <div class="container">
-        <div class="row">
+        <div class="row" style="margin-top: 70px;">
             {% if products_in_basket %}
                 <div class="col-sm-8 mx-auto order-form">
                     <h3 class="text-center">Товары в корзине</h3>
-                    <h5 class="text-center">Общая стоимость: {{ request.session.basket.total_amount }} грн </h5>
+
                             {{ request.session.basket.products }}
 
                     <form class="form-horizontal" method="post">{% csrf_token %}
@@ -82,7 +82,7 @@
 
                 </div>
              {% else %}
-                <h3 class="text-center">В Вашей корзине нет товаров</h3>
+                <h3 class="text-center" style="width:100%; margin-top:40px">В Вашей корзине нет товаров</h3>
             {% endif %}
 
         </div>
